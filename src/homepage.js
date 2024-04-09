@@ -1,4 +1,7 @@
 import loadMenupage from './menupage';
+import foodImage from './img/meatandwinefood.jpg';
+import moreFoodImage from './img/morefood.jpg';
+import seatingAreaImage from './img/seatingarea.jpg';
 
 function loadHomepage() {
   const content = document.getElementById('content');
@@ -6,6 +9,9 @@ function loadHomepage() {
   const title = document.createElement('h1');
   title.textContent = 'The Meat and Wine Co.';
   content.appendChild(title);
+  const foodImg = new Image();
+  foodImg.src = foodImage;
+  content.appendChild(foodImg);
 
   // Welcome div
   const welcomeDiv = document.createElement('div');
@@ -30,6 +36,11 @@ function loadHomepage() {
     loadMenupage();
   });
 
+  // More food image
+  const moreFoodImg = new Image();
+  moreFoodImg.src = moreFoodImage;
+  content.appendChild(moreFoodImg);
+
   // Mayfair Dining div
   const mayfairDiv = document.createElement('div');
   const mayfairHeader = document.createElement('h1');
@@ -48,6 +59,11 @@ function loadHomepage() {
   mayfairDiv.appendChild(mayfairParagraphThree);
   mayfairDiv.appendChild(viewMayFairMenuButton);
   content.appendChild(mayfairDiv);
+
+  // Seating area image
+  const seatingAreaImg = new Image();
+  seatingAreaImg.src = seatingAreaImage;
+  content.appendChild(seatingAreaImg);
 }
 
 export default loadHomepage;
